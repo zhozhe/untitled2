@@ -112,7 +112,7 @@ public class UpdateJFrame extends JFrame implements ActionListener {
         cancel.addActionListener(this);
         this.getContentPane().add(cancel);
         // 记录该日记文档的路径
-        path = "C:\\Users\\21250\\IdeaProjects\\untitled2\\untitled2\\untitled\\src\\diary\\data\\data\\data" + ID + ".txt";
+        path = "untitled\\src\\diary\\data\\data\\data" + ID + ".txt";
         // 反序列化得到该日记文档对象
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));

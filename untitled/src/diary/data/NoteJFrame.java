@@ -118,7 +118,7 @@ public class NoteJFrame extends JFrame implements ActionListener {
             // 如果选择是，则删除，否则不做任何操作
             if (num == 0) {
                 // 删除
-                File file = new File("C:\\Users\\21250\\IdeaProjects\\untitled2\\untitled2\\untitled\\src\\diary\\data\\data\\data" + ID + ".txt");
+                File file = new File("untitled\\src\\diary\\data\\data\\data" + ID + ".txt");
                 file.delete();
                 // 刷新主界面
                 this.setVisible(false);
@@ -135,6 +135,7 @@ public class NoteJFrame extends JFrame implements ActionListener {
 
         }
     }
+
     public static Object[][] tableDatas = null;
 
     //初始化组件
@@ -165,7 +166,7 @@ public class NoteJFrame extends JFrame implements ActionListener {
         // 3.读取日记对象
         // 创建日记存储文档的文件夹对象
 
-        File file = new File("C:\\Users\\21250\\IdeaProjects\\untitled2\\untitled2\\untitled\\src\\diary\\data\\data");
+        File file = new File("untitled\\src\\diary\\data\\data");
         getFileDatas(file);
 
         //给三个按钮设置宽高属性，并添加点击事件

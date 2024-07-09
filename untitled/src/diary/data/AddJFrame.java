@@ -42,14 +42,14 @@ public class AddJFrame extends JFrame implements ActionListener {
             // 保存添加的内容到本地文件
             try {
                 // 创建日记存储文档的文件夹对象
-                File file = new File("C:\\Users\\21250\\IdeaProjects\\untitled2\\untitled2\\untitled\\src\\diary\\data\\data");
+                File file = new File("untitled\\src\\diary\\data\\data");
                 // 得到文件夹下所有的日记存储文档的数组
                 File[] files = file.listFiles();
 
                 // 如果文件夹下没有日记文件，说明现在写的是第一个日记
                 if (files.length == 0) {
                     // 与日记文档建立连接管道（特别的：第一个新文件名的序号1）
-                    ObjectOutputStream bw = new ObjectOutputStream(new FileOutputStream("C:\\Users\\21250\\IdeaProjects\\untitled2\\untitled2\\untitled\\src\\diary\\data\\data\\data" + 1 + ".txt"));
+                    ObjectOutputStream bw = new ObjectOutputStream(new FileOutputStream("untitled\\src\\diary\\data\\data\\data" + 1 + ".txt"));
                     // 将输入框的标题和内容封装成一个日记对象写到本地文件中（特别的：第一个新日记的编号1）
                     Daily daily = new Daily(1, titleText.getText(), contentText.getText());
                     // 利用糊涂包将序列化的日记对象写入到本地文件中
@@ -65,7 +65,7 @@ public class AddJFrame extends JFrame implements ActionListener {
                     String str = sb.reverse().toString();
                     int ID = str.charAt(4) - '0';
                     // 与日记文档建立连接管道（特别的：新文件名的序号就是最后一个文件名的序号 +1）
-                    ObjectOutputStream bw = new ObjectOutputStream(new FileOutputStream("C:\\Users\\21250\\IdeaProjects\\untitled2\\untitled2\\untitled\\src\\diary\\data\\data\\data" + (ID + 1) + ".txt"));
+                    ObjectOutputStream bw = new ObjectOutputStream(new FileOutputStream("untitled\\src\\diary\\data\\data\\data" + (ID + 1) + ".txt"));
                     // 将输入框的标题和内容封装成一个日记对象写到本地文件中（特别的：新日记的编号就是最后一个日记的编号 +1）
                     Daily daily = new Daily(ID + 1, titleText.getText(), contentText.getText());
                     // 利用糊涂包将序列化的日记对象写入到本地文件中
